@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* 
+<div class="grid">
+  <div class="cr">
+    <div class="ln"></div>
+  </div>
+</div>
+*/
+.grid {
+  width: 36vw;
+  height: 36vh;
+  background-image: repeating-linear-gradient(gray 0 2px, transparent 2px 6vh),
+    linear-gradient(transparent 0 calc(100% - 2px), gray calc(100% - 2px)),
+    repeating-linear-gradient(90deg, gray 0 2px, transparent 2px 6vw),
+    linear-gradient(90deg, transparent 0 calc(100% - 2px), gray calc(100% - 2px));
+  position: relative;
+}
+
+.cr {
+  position: absolute;
+  width: 6vw;
+  height: 6vw;
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transform: translate(-150%, -50%);
+  background-color: #cfe9d7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ln {
+  width: 50%;
+  height: 3px;
+  background-color: #85c897;
+  position: relative;
+  margin: 10px;
+}
+
+.ln::after,
+.ln::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 3px;
+  background-color: #85c897;
+}
+
+.ln::before {
+  top: -10px;
+}
+
+/*
+<div class="dev1"><span>&lt;/&gt;</span></div>
+*/
+
+.dev1 {
+  width: 25vw;
+  min-width: 300px;
+  height: 25vh;
+  min-height: 200px;
+  border: 1px solid #f6a318;
+  background-image: linear-gradient(90deg, transparent 0 40%, #feeec5 40%);
+  position: relative;
+}
+
+.dev1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-color: #f6a928;
+  top: 0;
+  left: 0;
+}
+
+.dev1 span {
+  color: #fbcf61;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+<div class="quarter rd"></div>
+<div class="quarter grn"></div>
+*/
+
+.quarter {
+  width: 0;
+  height: 0;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-radius: 40px;
+}
+
+.rd {
+  border-top: 40px solid #fce8e6;
+  transform: rotate(45deg);
+}
+
+.grn {
+  border-top: 40px solid #d4e4fc;
+  transform: rotate(-135deg);
+}
+
+/* 
+<div class="avatar"></div> 
+*/
+
+.avatar {
+  width: 150px;
+  height: 75px;
+  flex-shrink: 0;
+  border: 1px solid #b1cdf8;
+  background-image: linear-gradient(90deg, transparent 0 50%, #d4e4fc 50%);
+  position: relative;
+}
+
+.avatar::after,
+.avatar::before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  height: 20px;
+  transform: translateX(-50%);
+  background-color: #4688f1;
+  border: 1px solid #3a80f0;
+}
+
+.avatar::before {
+  width: 20px;
+  border-radius: 50%;
+  top: 15px;
+}
+
+.avatar::after {
+  width: 40px;
+  border-radius: 20px 20px 0 0;
+  top: 40px;
+}
+
+
+/* 
+<div class="dev2">
+<div class="earth">
+  <div>
+    <hr />
+    <hr />
+  </div>
+</div>
+<div class="lines">
+  <span class="ln1"></span>
+  <span class="ln2"></span>
+  <span class="ln3"></span>
+  <span class="ln4"></span>
+  <span class="ln5"></span>
+</div>
+</div> 
+*/
+
+.dev2 {
+  width: 10vw;
+  min-width: 200px;
+  aspect-ratio: .6;
+  border: 2px solid #ec9e9c;
+  background-image: linear-gradient(transparent 45%, #fce8e6 45%);
+  position: relative
+}
+
+.dev2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #d7332e;
+  border-bottom: 2px solid #ec9e9c;
+}
+
+.earth {
+  width: 5vw;
+  min-width: 100px;
+  aspect-ratio: 1;
+  border: 2px solid #d83934;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: calc(20% + 20px);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  position: relative;
+}
+
+.earth div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.earth div hr {
+  width: 100%;
+  height: 0;
+  border: none;
+  border-top: 2px solid #d83934;
+}
+
+.earth::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  top: -2px;
+  left: 25%;
+  z-index: 99;
+  border: 2px solid #d83934;
+}
+
+.lines {
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.lines>span {
+  width: 100%;
+  height: 2px;
+}
+
+.ln1 {
+  background-image: linear-gradient(90deg, transparent 10%, #d83934 10% 25%, transparent 25% 30%, #d83934 30% 70%, transparent 70%)
+}
+
+.ln2 {
+  background-image: linear-gradient(90deg, transparent 25%, #d83934 25% 75%, transparent 75% 80%, #d83934 80% 90%, transparent 90%)
+}
+
+.ln3 {
+  background-image: linear-gradient(90deg, transparent 25%, #d83934 25% 60%, transparent 60% 65%, #d83934 65% 80%, transparent 80%)
+}
+
+.ln4 {
+  background-image: linear-gradient(90deg, transparent 25%, #d83934 25% 50%, transparent 50%);
+}
+
+.ln5 {
+  background-image: linear-gradient(90deg, transparent 10%, #d83934 10% 40%, transparent 40%)
+}
