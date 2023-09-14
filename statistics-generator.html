@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="statistics.css">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Statstics Generator</h1>
-  <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="statistics.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="loaderWrapper" id="loader">
+      <div class="loaderContainer">
+        <div class="loader"></div>
+      </div>
+    </div>
+    <h1>Statstics Generator</h1>
+    <div class="fileInput">
+      <span>choose a file</span>
+      <input type="file" name="myInput" id="myInput" />
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>Total Number of Lines</td>
+          <td id="nmbrOfLines">-</td>
+        </tr>
+        <tr>
+          <td>Total Number of Words</td>
+          <td id="nmbrOfWords">-</td>
+        </tr>
+        <tr>
+          <td>Total Number of Characters<span> (including spaces)</span></td>
+          <td id="nmbrOfCharsI">-</td>
+        </tr>
+        <tr>
+          <td>Total Number of Characters<span> (excluding spaces)</span></td>
+          <td id="nmbrOfCharsE">-</td>
+        </tr>
+        <tr>
+          <td>
+            <span id="nmbrOfMost">10 </span>
+            Most Frequent Words and their Count
+          </td>
+          <td>
+            <div class="dropdown-btn" id="dropdown-btn">
+              <img
+                src="./images/expand-arrow.png"
+                alt="expand-arrow"
+                width="50%"
+                height="50%" />
+            </div>
+          </td>
+        </tr>
+        <tr class="words-row" id="words-row">
+          <td colspan="2">
+            <div class="words-container" id="words-container">
+              <div class="case">
+                <div id="sensitive" class="sensitive">case-sensitive</div>
+                <div id="insensitive" class="insensitive">case-insensitive</div>
+              </div>
+              <ul id="words">
+                <li>no word is detected</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="error" id="error">
+      an error occurs while treating the file
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
