@@ -22,7 +22,7 @@
 body {
   background-color: var(--blue1);
   max-width: 100svw;
-  min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
 }
 
@@ -74,6 +74,14 @@ nav::after {
 
 .show {
   left: 0;
+}
+
+.btm {
+  top: unset;
+  left: unset;
+  bottom: 5%;
+  right: 10px;
+  display: none;
 }
 
 nav ul {
@@ -378,8 +386,7 @@ main {
   .open-menu {
     display: none;
   }
-
-
+  
   nav {
     position: relative;
     top: 0;
@@ -394,7 +401,6 @@ main {
 
   nav ul {
     flex-direction: row;
-    gap: 50px;
   }
 
   nav ul a {
@@ -402,6 +408,7 @@ main {
     height: 100%;
     font-size: 1.3rem;
     padding: 0px;
+    padding: 0 40px
   }
 
   nav ul a li {
@@ -414,15 +421,23 @@ main {
   }
 
   .selected {
-    background-color: transparent;
+    height: calc(100% + 10px);
+    box-sizing: border-box;
+    border-top: 10px solid var(--yellow1);
+    transition: 200ms;
   }
-
+  
   .selected::after {
-    display: none;
+    width: 5px;
+    height: 100%;
   }
-
+  
   .selected::before {
-    display: none;
+    width: 5px;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    left: unset;
   }
 
   .social-meida {
@@ -449,6 +464,10 @@ main {
     align-items: flex-start;
     padding: 0  20px;
     font-size: 1.1rem;
+  }
+
+  .btm {
+    display: flex;
   }
   
   .album {
