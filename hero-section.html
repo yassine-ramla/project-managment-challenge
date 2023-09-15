@@ -1,13 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="hero.css">
-  <title>Document</title>
-</head>
-<body>
-  <h1>hero section</h1>
-  <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hero.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="decoration.css" />
+    <title>project management challenge</title>
+  </head>
+  <body>
+    <div class="hero-section">
+      <header>
+        <div class="logo">GDSC-ESI-SBA</div>
+        <div class="open-menu" id="open-menu">
+          <img src="./images/menu.svg" alt="open menu" />
+        </div>
+        <nav id="menu">
+          <ul>
+            <a href="#" class="selected" id="about">
+              <img src="./images/about.svg" alt="about" />
+              <li>About</li>
+            </a>
+            <a href="#" id="events">
+              <img src="./images/events.svg" alt="events" />
+              <li>Events</li>
+            </a>
+            <a href="#" id="join">
+              <img src="./images/joinus.svg" alt="join us" />
+              <li>Join Us</li>
+            </a>
+            <div class="social-meida">
+              <a href="https://www.facebook.com/GDSC.ESI.SBA/">
+                <img src="./images/facebook.svg" alt="facebook" />
+              </a>
+              <a href="https://www.instagram.com/gdsc_esi_sba/">
+                <img src="./images/instagram.svg" alt="instagram" />
+              </a>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="description">
+          <div class="quarter"></div>
+          <p class="symbol" id="symbol"></p>
+          Google Developer Student Clubs are university based community groups
+          for students interested in Google developer technologies. Students
+          from all undergraduate or graduate programs with an interest in
+        </section>
+        <section class="album" id="album">
+          <div class="dev1"><span>&lt;/&gt;</span></div>
+          <div class="grid">
+            <div class="cr">
+              <div class="ln"></div>
+            </div>
+          </div>
+          <div class="dev2">
+            <div class="earth">
+              <div>
+                <hr />
+                <hr />
+              </div>
+            </div>
+            <div class="lines">
+              <span class="ln1"></span>
+              <span class="ln2"></span>
+              <span class="ln3"></span>
+              <span class="ln4"></span>
+              <span class="ln5"></span>
+            </div>
+          </div>
+          <div class="avatar"></div> 
+          <img
+            src="./images/photo_2023-09-14_20-18-55.jpg"
+            alt=""
+            class="img1" />
+          <img
+            src="./images/photo_2023-09-14_20-19-03.jpg"
+            alt=""
+            class="img2" />
+          <img
+            src="./images/photo_2023-09-14_20-19-05.jpg"
+            alt=""
+            class="img3" />
+          <img
+            src="./images/photo_2023-09-14_20-18-59.jpg"
+            alt=""
+            class="img4" />
+        </section>
+      </main>
+    </div>
+    <script src="hero.js"></script>
+  </body>
 </html>
