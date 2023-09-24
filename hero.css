@@ -1,26 +1,25 @@
 :root {
-  --white: white;
-  --yellow1: #f9bd03;
-  --yellow2: #feeec5;
-  --red: #fce8e6;
-  --green1: #34a853;
-  --green2: #d4e4fc;
-  --blue1: #4688f1;
-  --blue2: #d4e4fc;
-  --red1: #d7332e;
-  --red2: #ec9e9c;
-  --red3: #fce8e6;
+  --text: #fff;
+  --primary: #4688f1;
+  --secondary1: #d7332e;
+  --secondary2: #dd8e8c;
+  --secondary3: #ffe4e4;
+  --accent1: #f9bd03;
+  --accent2: #feeec5;
+  --neutral1: #a8d4c7;
+  --neutral2: #fff;
 }
 
-* {
+*, ::after, ::before{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  transition: 200ms;
 }
 
 body {
-  background-color: var(--blue1);
+  background-color: var(--primary);
   max-width: 100svw;
   min-height: 100svh;
   overflow: hidden;
@@ -39,8 +38,8 @@ header {
   justify-content: space-between;
   padding: 0 20px;
   height: 50px;
-  background-color: var(--red1);
-  box-shadow: 0 5px 0 0 var(--yellow1);
+  background-color: var(--secondary1);
+  box-shadow: 0 5px 0 0 var(--accent1);
   position: fixed;
 }
 
@@ -52,11 +51,16 @@ header {
   font-weight: bold;
 }
 
+.logo>img {
+  max-width: 500px;
+  min-width: 200px;
+}
+
 nav {
   position: fixed;
   top: 50px;
   left: -50%;
-  background-color: var(--red1);
+  background-color: var(--secondary1);
   width: 50%;
   height: calc(100% - 50px);
   transition: 500ms;
@@ -69,7 +73,7 @@ nav::after {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: var(--yellow1);
+  background-color: var(--accent1);
 }
 
 .show {
@@ -116,7 +120,7 @@ nav ul a img {
 }
 
 .selected {
-  background-color: var(--blue1);
+  background-color: var(--primary);
   z-index: 1;
   position: relative;
 }
@@ -126,7 +130,7 @@ nav ul a img {
   position: absolute;
   width: 100%;
   height: 5px;
-  background-color: var(--yellow1);
+  background-color: var(--accent1);
   top: 0;
   left: 0;
 }
@@ -136,7 +140,7 @@ nav ul a img {
   position: absolute;
   width: 100%;
   height: 5px;
-  background-color: var(--yellow1);
+  background-color: var(--accent1);
   bottom: 0;
   left: 0;
 }
@@ -152,7 +156,6 @@ nav ul a img {
 .social-meida a {
   width: unset;
   padding: 0;
-  transition: 200ms;
 }
 
 .social-meida a:hover {
@@ -211,7 +214,7 @@ main {
   place-items: center;
 }
 
-.album img {
+.album>img {
   position: absolute;
   width: 90%;
   height: 90%;
@@ -219,9 +222,10 @@ main {
   opacity: 0;
   animation-duration: 16s;
   animation-iteration-count: infinite;
+  border: 5px solid var(--secondary2);
 }
 
-.album .img1 {
+.album>.img1 {
   animation-name: img1;
 }
 
@@ -235,6 +239,29 @@ main {
 
 .img4 {
   animation-name: img4;
+}
+
+.theme-switch {
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  border: 3px solid var(--text);
+  border-radius: 30px 0 0 30px;
+  background-color: var(--secondary1);
+  position: absolute;
+  top: 80px;
+  right: -3px;
+  cursor: pointer;
+}
+
+.swith-btn {
+  height: calc(100% - 6px);
+  aspect-ratio: 1;
+  background-color: var(--text);
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  top: 3px;
+  left: 36px;
 }
 
 
@@ -386,7 +413,7 @@ main {
   .open-menu {
     display: none;
   }
-  
+
   nav {
     position: relative;
     top: 0;
@@ -423,15 +450,14 @@ main {
   .selected {
     height: calc(100% + 10px);
     box-sizing: border-box;
-    border-top: 10px solid var(--yellow1);
-    transition: 200ms;
+    border-top: 10px solid var(--accent1);
   }
-  
+
   .selected::after {
     width: 5px;
     height: 100%;
   }
-  
+
   .selected::before {
     width: 5px;
     height: 100%;
@@ -455,21 +481,21 @@ main {
     max-width: 1400px;
     gap: 50px;
   }
-  
+
   .description {
     height: 100%;
     width: 50%;
     text-align: left;
     display: flex;
     align-items: flex-start;
-    padding: 0  20px;
+    padding: 0 20px;
     font-size: 1.1rem;
   }
 
   .btm {
     display: flex;
   }
-  
+
   .album {
     height: 80%;
     width: 50%;
@@ -477,7 +503,7 @@ main {
     display: grid;
     place-items: center;
   }
-  
+
   .album img {
     position: absolute;
     width: 90%;

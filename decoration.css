@@ -1,16 +1,3 @@
-:root {
-  --white: white;
-  --yellow1: #f9bd03;
-  --yellow2: #feeec5;
-  --red: #fce8e6;
-  --green: #a8d4c7;
-  --blue2: #bccce2;
-  --blue1: #4688f1;
-  --red1: #d7332e;
-  --red2: #dd8e8c;
-  --red3: #ffe4e4;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -30,10 +17,10 @@
   max-width: 200px;
   height: 36vw;
   max-height: 200px;
-  background-image: repeating-linear-gradient(var(--yellow2) 0 2px, transparent 2px 16.67%),
-    linear-gradient(transparent 0 calc(100% - 2px), var(--yellow2) calc(100% - 2px)),
-    repeating-linear-gradient(90deg, var(--yellow2) 0 2px, transparent 2px 16.67%),
-    linear-gradient(90deg, transparent 0 calc(100% - 2px), var(--yellow2) calc(100% - 2px));
+  background-image: repeating-linear-gradient(var(--accent2) 0 2px, transparent 2px 16.67%),
+    linear-gradient(transparent 0 calc(100% - 2px), var(--accent2) calc(100% - 2px)),
+    repeating-linear-gradient(90deg, var(--accent2) 0 2px, transparent 2px 16.67%),
+    linear-gradient(90deg, transparent 0 calc(100% - 2px), var(--accent2) calc(100% - 2px));
   position: absolute;
   left: 10px;
   top: 0;
@@ -50,7 +37,7 @@
   top: 100%;
   left: 100%;
   transform: translate(-120%, -60%);
-  background-color: var(--yellow1);
+  background-color: var(--accent1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +48,7 @@
 .ln {
   width: 50%;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--neutral2);
   position: relative;
 }
 
@@ -73,7 +60,7 @@
   top: min(1.5vw, 10px);
   width: 100%;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--neutral2);
 }
 
 .ln::before {
@@ -89,8 +76,8 @@
   min-width: 300px;
   height: 25vh;
   min-height: 200px;
-  border: 1px solid var(--yellow1);
-  background-image: linear-gradient(90deg, #f8e19a 0 40%, var(--yellow1) 40% calc(40% + 1px), var(--yellow2) calc(40% + 1px));
+  border: 1px solid var(--accent1);
+  background-image: linear-gradient(90deg, var(--accent1) 0 40%, var(--accent1) 40% calc(40% + 1px), var(--accent2) calc(40% + 1px));
   position: absolute;
   z-index: -1;
   scale: .5;
@@ -104,13 +91,13 @@
   position: absolute;
   width: 100%;
   height: 20px;
-  background-color: var(--yellow1);
+  background-color: var(--accent1);
   top: 0;
   left: 0;
 }
 
 .dev1 span {
-  color: var(--yellow1);
+  color: var(--accent1);
   font-size: 4rem;
   position: absolute;
   top: 50%;
@@ -126,8 +113,8 @@
   width: 0;
   height: 0;
   border: 40px solid transparent;
-  border-top: 40px solid var(--red2);
-  border-bottom: 40px solid var(--green);
+  border-top: 40px solid var(--secondary2);
+  border-bottom: 40px solid var(--neutral1);
   border-radius: 50%;
   position: absolute;
   top: 5%;
@@ -155,12 +142,12 @@
   width: 150px;
   height: 75px;
   flex-shrink: 0;
-  border: 1px solid var(--red2);
-  background-image: linear-gradient(90deg, var(--red3) 0 50%, var(--red2) 50%);
+  border: 1px solid var(--secondary2);
+  background-image: linear-gradient(90deg, var(--secondary3) 0 50%, var(--secondary2) 50%);
   position: absolute;
   z-index: -1;
-  bottom: 60px;
-  left: 40px;
+  bottom: 5%;
+  left: 5%;
 }
 
 .avatar::after,
@@ -170,7 +157,7 @@
   left: 25%;
   height: 20px;
   transform: translateX(-50%);
-  background-color: var(--red2);
+  background-color: var(--secondary2);
 }
 
 .avatar::before {
@@ -208,8 +195,8 @@
   width: 10vw;
   min-width: 200px;
   aspect-ratio: .6;
-  border: 2px solid var(--red2);
-  background-image: linear-gradient(transparent 45%, var(--red2) 45% calc(45% + 2px), var(--red3) calc(45% + 2px));
+  border: 2px solid var(--secondary2);
+  background-image: linear-gradient(transparent 45%, var(--secondary2) 45% calc(45% + 2px), var(--secondary3) calc(45% + 2px));
   position: absolute;
   scale: .5;
   z-index: -1;
@@ -225,15 +212,15 @@
   left: 0;
   width: 100%;
   height: 20px;
-  background-color: var(--red3);
-  border-bottom: 2px solid var(--red2);
+  background-color: var(--secondary3);
+  border-bottom: 2px solid var(--secondary2);
 }
 
 .earth {
   width: 5vw;
   min-width: 100px;
   aspect-ratio: 1;
-  border: 2px solid var(--red2);
+  border: 2px solid var(--secondary2);
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -256,7 +243,7 @@
   width: 100%;
   height: 0;
   border: none;
-  border-top: 2px solid var(--red2);
+  border-top: 2px solid var(--secondary2);
 }
 
 .earth::after {
@@ -268,7 +255,7 @@
   top: -2px;
   left: 25%;
   z-index: 99;
-  border: 2px solid var(--red2);
+  border: 2px solid var(--secondary2);
 }
 
 .lines {
@@ -288,21 +275,21 @@
 }
 
 .ln1 {
-  background-image: linear-gradient(90deg, transparent 10%, var(--red2) 10% 25%, transparent 25% 30%, var(--red2) 30% 70%, transparent 70%)
+  background-image: linear-gradient(90deg, transparent 10%, var(--secondary2) 10% 25%, transparent 25% 30%, var(--secondary2) 30% 70%, transparent 70%)
 }
 
 .ln2 {
-  background-image: linear-gradient(90deg, transparent 25%, var(--red2) 25% 75%, transparent 75% 80%, var(--red2) 80% 90%, transparent 90%)
+  background-image: linear-gradient(90deg, transparent 25%, var(--secondary2) 25% 75%, transparent 75% 80%, var(--secondary2) 80% 90%, transparent 90%)
 }
 
 .ln3 {
-  background-image: linear-gradient(90deg, transparent 25%, var(--red2) 25% 60%, transparent 60% 65%, var(--red2) 65% 80%, transparent 80%)
+  background-image: linear-gradient(90deg, transparent 25%, var(--secondary2) 25% 60%, transparent 60% 65%, var(--secondary2) 65% 80%, transparent 80%)
 }
 
 .ln4 {
-  background-image: linear-gradient(90deg, transparent 25%, var(--red2) 25% 50%, transparent 50%);
+  background-image: linear-gradient(90deg, transparent 25%, var(--secondary2) 25% 50%, transparent 50%);
 }
 
 .ln5 {
-  background-image: linear-gradient(90deg, transparent 10%, var(--red2) 10% 40%, transparent 40%)
+  background-image: linear-gradient(90deg, transparent 10%, var(--secondary2) 10% 40%, transparent 40%)
 }
